@@ -25,8 +25,12 @@ export default async function DashboardPage() {
 
   const activePatients: PatientWithTreatment[] = (patients ?? [])
     .map((p) => {
-      const activeTreatment = (p.treatments as any[]).find((t) => !t.discharge_date) ?? null
-      const status = getTreatmentStatus(activeTreatment)
+      const sorted = (p.treatments as any[]).sort(
+        (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      )
+      const activeTreatment = sorted.find((t) => !t.discharge_date) ?? null
+      const lastTreatment = activeTreatment ?? sorted[0] ?? null
+      const status = getTreatmentStatus(lastTreatment)
       const days = getDaysPostOp(activeTreatment)
       return { ...p, treatment: activeTreatment, status, days_post_op: days }
     })
