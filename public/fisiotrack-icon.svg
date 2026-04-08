@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cabeça do fisioterapeuta (sentado) -->
+  <circle cx="258" cy="82" r="48"/>
+  <!-- Corpo do fisioterapeuta -->
+  <path d="M212 130 C195 170 188 220 188 280 L188 340"/>
+  <path d="M304 130 C318 165 318 220 318 280"/>
+  <!-- Tronco -->
+  <path d="M212 130 L304 130"/>
+  <!-- Braço/perna estendida diagonal -->
+  <line x1="220" y1="230" x2="390" y2="300"/>
+  <!-- Assento / quadril -->
+  <path d="M188 280 L318 280"/>
+  <!-- Coluna vertical do equipamento -->
+  <line x1="318" y1="280" x2="318" y2="340"/>
+  <!-- Mesa de tratamento (barra horizontal arredondada) -->
+  <rect x="62" y="340" width="400" height="64" rx="32"/>
+  <!-- Paciente deitado - cabeça -->
+  <circle cx="52" cy="372" r="38"/>
+  <!-- Perna do fisioterapeuta descendo para o chão -->
+  <path d="M188 340 L188 372"/>
+  <path d="M318 340 L318 372"/>
+</svg>
